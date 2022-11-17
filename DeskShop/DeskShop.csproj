@@ -46,36 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Acesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Acesso.Designer.cs">
+      <DependentUpon>Acesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="PCGamer.cs">
+    <Compile Include="Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PCGamer.Designer.cs">
-      <DependentUpon>PCGamer.cs</DependentUpon>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaMenu.Designer.cs">
+      <DependentUpon>TelaMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Acesso.resx">
+      <DependentUpon>Acesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PCGamer.resx">
-      <DependentUpon>PCGamer.cs</DependentUpon>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaMenu.resx">
+      <DependentUpon>TelaMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,20 +92,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\MIn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Max.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Normal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Pc Gamer 2k.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Pc Gamer 8gb.jpg" />
+    <None Include="Resources\Minimizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

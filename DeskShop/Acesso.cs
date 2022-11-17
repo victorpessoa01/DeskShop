@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace DeskShop
 {
-    public partial class PCGamer : Form
+    public partial class Acesso : Form
     {
-        public PCGamer()
+        public Acesso()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBoxSair_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }
