@@ -15,18 +15,11 @@ namespace DeskShop
         public TelaMenu()
         {
             InitializeComponent();
-        }     
-                
-        private void bntGamer_Click(object sender, EventArgs e)
-        {
-            Clientes clientes = new Clientes();
-            clientes.TopLevel = false;
-            clientes.Dock = DockStyle.Fill;
-            panelCentro.Controls.Clear();
-            panelCentro.Controls.Add(clientes);
-            clientes.Show();
-        }
 
+            Acesso acesso = new Acesso();
+            acesso.Close();
+        }               
+        
         private void pictureBoxMax_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -45,7 +38,9 @@ namespace DeskShop
         private void bntLogout_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja Fechar o Programa?","DeskShop",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+            { 
+                Acesso acesso = new Acesso();
+                acesso.Close();
                 Close();
             }
 
@@ -55,7 +50,23 @@ namespace DeskShop
 
                 Acesso acesso = new Acesso();
                 acesso.Show();
+                this.Dispose(); 
             }
+        }
+
+        private void panelCentro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bntClientes_Click(object sender, EventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            clientes.TopLevel = false;
+            clientes.Dock = DockStyle.Fill;
+            panelCentro.Controls.Clear();
+            panelCentro.Controls.Add(clientes);
+            clientes.Show();
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
             this.panelLateral = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.bntLogout = new System.Windows.Forms.Button();
@@ -35,23 +36,16 @@
             this.bntPedidos = new System.Windows.Forms.Button();
             this.bntProdutos = new System.Windows.Forms.Button();
             this.bntClientes = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBoxMin = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
             this.pictureBoxNormal = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBoxMin = new System.Windows.Forms.PictureBox();
             this.pictureBoxMax = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelCentro = new System.Windows.Forms.Panel();
             this.panelLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMin)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormal)).BeginInit();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMax)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +67,9 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(132, 79);
@@ -126,101 +122,82 @@
             this.bntClientes.TabIndex = 0;
             this.bntClientes.Text = "Clientes";
             this.bntClientes.UseVisualStyleBackColor = true;
+            this.bntClientes.Click += new System.EventHandler(this.bntClientes_Click);
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(632, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(89, 34);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBoxMin);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(79, 34);
-            this.panel3.TabIndex = 2;
-            // 
-            // pictureBoxMin
-            // 
-            this.pictureBoxMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxMin.Location = new System.Drawing.Point(53, 5);
-            this.pictureBoxMin.Name = "pictureBoxMin";
-            this.pictureBoxMin.Size = new System.Drawing.Size(26, 23);
-            this.pictureBoxMin.TabIndex = 2;
-            this.pictureBoxMin.TabStop = false;
-            this.pictureBoxMin.Click += new System.EventHandler(this.pictureBoxMin_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pictureBoxNormal);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(26, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(28, 34);
-            this.panel4.TabIndex = 3;
+            this.panelTop.BackColor = System.Drawing.Color.Transparent;
+            this.panelTop.Controls.Add(this.pictureBoxMin);
+            this.panelTop.Controls.Add(this.pictureBoxMax);
+            this.panelTop.Controls.Add(this.pictureBoxNormal);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(132, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(588, 27);
+            this.panelTop.TabIndex = 0;
             // 
             // pictureBoxNormal
             // 
+            this.pictureBoxNormal.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxNormal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxNormal.BackgroundImage")));
             this.pictureBoxNormal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxNormal.Location = new System.Drawing.Point(0, 5);
+            this.pictureBoxNormal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxNormal.Location = new System.Drawing.Point(560, 0);
             this.pictureBoxNormal.Name = "pictureBoxNormal";
-            this.pictureBoxNormal.Size = new System.Drawing.Size(28, 23);
+            this.pictureBoxNormal.Size = new System.Drawing.Size(28, 27);
             this.pictureBoxNormal.TabIndex = 1;
             this.pictureBoxNormal.TabStop = false;
             this.pictureBoxNormal.Click += new System.EventHandler(this.pictureBoxNormal_Click);
             // 
-            // panel5
+            // pictureBoxMin
             // 
-            this.panel5.Controls.Add(this.pictureBoxMax);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(26, 34);
-            this.panel5.TabIndex = 3;
+            this.pictureBoxMin.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMin.BackgroundImage")));
+            this.pictureBoxMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxMin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxMin.Location = new System.Drawing.Point(508, 0);
+            this.pictureBoxMin.Name = "pictureBoxMin";
+            this.pictureBoxMin.Size = new System.Drawing.Size(26, 27);
+            this.pictureBoxMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMin.TabIndex = 2;
+            this.pictureBoxMin.TabStop = false;
+            this.pictureBoxMin.Click += new System.EventHandler(this.pictureBoxMin_Click);
             // 
             // pictureBoxMax
             // 
             this.pictureBoxMax.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxMax.BackgroundImage")));
             this.pictureBoxMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxMax.Location = new System.Drawing.Point(0, 5);
+            this.pictureBoxMax.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBoxMax.Location = new System.Drawing.Point(534, 0);
             this.pictureBoxMax.Name = "pictureBoxMax";
-            this.pictureBoxMax.Size = new System.Drawing.Size(26, 23);
+            this.pictureBoxMax.Size = new System.Drawing.Size(26, 27);
             this.pictureBoxMax.TabIndex = 0;
             this.pictureBoxMax.TabStop = false;
             this.pictureBoxMax.Click += new System.EventHandler(this.pictureBoxMax_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(79, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 34);
-            this.panel2.TabIndex = 2;
-            // 
             // panelCentro
             // 
-            this.panelCentro.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCentro.Location = new System.Drawing.Point(132, 34);
+            this.panelCentro.BackColor = System.Drawing.Color.Transparent;
+            this.panelCentro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCentro.BackgroundImage")));
+            this.panelCentro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCentro.Location = new System.Drawing.Point(132, 27);
             this.panelCentro.Name = "panelCentro";
-            this.panelCentro.Size = new System.Drawing.Size(588, 446);
-            this.panelCentro.TabIndex = 2;
+            this.panelCentro.Size = new System.Drawing.Size(588, 453);
+            this.panelCentro.TabIndex = 1;
             // 
             // TelaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(720, 480);
             this.Controls.Add(this.panelCentro);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelLateral);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -229,12 +206,9 @@
             this.Text = "Form1";
             this.panelLateral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMin)).EndInit();
-            this.panel4.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNormal)).EndInit();
-            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMax)).EndInit();
             this.ResumeLayout(false);
 
@@ -243,21 +217,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panelLateral;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBoxMin;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBoxNormal;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBoxMax;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelCentro;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Button bntLogout;
         private System.Windows.Forms.Button bntSistema;
         private System.Windows.Forms.Button bntPedidos;
         private System.Windows.Forms.Button bntProdutos;
         private System.Windows.Forms.Button bntClientes;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.PictureBox pictureBoxMin;
+        private System.Windows.Forms.PictureBox pictureBoxMax;
+        private System.Windows.Forms.PictureBox pictureBoxNormal;
+        private System.Windows.Forms.Panel panelCentro;
     }
 }
 
