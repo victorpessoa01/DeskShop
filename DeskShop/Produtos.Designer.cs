@@ -1,6 +1,6 @@
 ﻿namespace DeskShop
 {
-    partial class Clientes
+    partial class Produtos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             this.SuspendLayout();
             // 
-            // Clientes
+            // Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(588, 453);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Clientes";
-            this.Text = "Clientes";
+            this.Name = "Produtos";
+            this.Text = "Produtos";
             this.ResumeLayout(false);
 
         }

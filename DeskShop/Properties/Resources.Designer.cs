@@ -59,15 +59,5 @@ namespace DeskShop.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DeskSHOP {
-            get {
-                object obj = ResourceManager.GetObject("DeskSHOP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

@@ -18,15 +18,15 @@ namespace DeskShop
 
             Acesso acesso = new Acesso();
             acesso.Close();
-        }               
-        
+        }
+
         private void bntLogout_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja Fechar o Programa?","DeskShop",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
-            { 
+            {
                 Close();
             }
-            }
+        }
 
         private void panelCentro_Paint(object sender, PaintEventArgs e)
         {
@@ -41,6 +41,26 @@ namespace DeskShop
             panelCentro.Controls.Clear();
             panelCentro.Controls.Add(clientes);
             clientes.Show();
+        }
+
+        private void panelCentro_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBoxMin_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBoxNormal_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void pictureBoxMax_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

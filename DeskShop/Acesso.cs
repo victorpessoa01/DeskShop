@@ -28,6 +28,7 @@ namespace DeskShop
                 acesso.Close();
                 TelaMenu tela=new TelaMenu();
                 tela.ShowDialog();
+                this.Close();
             }
 
             else if (textBoxLogin.Text=="" && textBoxSenha.Text == "")
